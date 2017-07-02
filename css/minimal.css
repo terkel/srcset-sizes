@@ -1,0 +1,166 @@
+@charset "UTF-8";
+
+*, *:before, *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: "Hiragino Mincho ProN", "Yu Mincho", "Open Sans", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+    font-size: 100%;
+    line-height: 1.75;
+}
+
+body {
+    margin: auto;
+    max-width: 48em;
+    padding: 1em;
+}
+
+hr {
+    border: solid rgba(0, 0, 0, 0.1);
+    border-width: 1px 0 0;
+    margin: 3.5em 0;
+}
+
+h1, h2, h3, h4, h5, h6, em, b {
+    font-family: "Open Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic", "Meiryo", sans-serif;
+}
+
+h1 {
+    font-size: 1.75rem;
+    line-height: 1.5;
+    margin: 3.5rem 0;
+}
+
+h2 {
+    font-size: 1.75rem;
+    font-weight: normal;
+    line-height: 1.5;
+    margin: 3.5rem 0 1.75rem;
+}
+
+h3 {
+    font-size: 1.3125rem;
+    line-height: 1.34;
+    margin: 3.5rem 0 1.75rem;
+}
+
+p, blockquote, ol, ul, .colophon {
+    margin: 1.75rem 0;
+}
+
+blockquote {
+    padding: 0 3rem;
+    position: relative;
+}
+
+blockquote:before {
+    background: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2232%22%20height%3D%2232%22%20viewBox%3D%220%200%2032%2032%22%3E%3Cpath%20stroke%3D%22%23449FDB%22%20d%3D%22M0%200%22%2F%3E%3Cpath%20d%3D%22M7.031%2014c3.866%200%207%203.134%207%207s-3.134%207-7%207-7-3.134-7-7l-.031-1c0-7.732%206.268-14%2014-14v4c-2.671%200-5.182%201.04-7.071%202.929-.364.364-.695.751-.995%201.157.357-.056.724-.086%201.097-.086zm18%200c3.866%200%207%203.134%207%207s-3.134%207-7%207-7-3.134-7-7l-.031-1c0-7.732%206.268-14%2014-14v4c-2.671%200-5.182%201.04-7.071%202.929-.364.364-.695.751-.995%201.157.358-.056.724-.086%201.097-.086z%22%2F%3E%3C%2Fsvg%3E") no-repeat;
+    background-size: 100% auto;
+    content: "";
+    height: 1.5rem;
+    left: 0;
+    opacity: 0.1;
+    position: absolute;
+    top: 0;
+    width: 1.5rem;
+}
+
+blockquote p {
+    margin: 0;
+}
+
+blockquote > footer {
+    text-align: right;
+}
+
+ol, ul {
+    padding-left: 3rem;
+}
+
+pre,
+code,
+samp,
+kbd {
+    font-family: "Ubuntu Mono", "Menlo", "Consolas", monospace;
+}
+
+pre {
+    font-size: 87.5%;
+    line-height: 1.5;
+    white-space: pre-wrap;
+    padding: 1.75rem 1.5rem;
+    margin: 2.1875rem 0;
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+code,
+samp,
+kbd {
+    line-height: normal;
+}
+
+em {
+    font-style: normal;
+    font-weight: bold;
+}
+
+.author {
+    display: block;
+    text-align: right;
+}
+
+a.footnote {
+    font-size: 75%;
+    line-height: 0;
+    padding: 0 0.25em;
+    position: relative;
+    text-decoration: none;
+    top: -0.5em;
+    vertical-align: baseline;
+}
+
+.footnotes,
+[role="contentinfo"] {
+    font-size: 87.5%;
+    line-height: 1.5;
+    margin-bottom: 3.5rem;
+}
+
+a.reversefootnote {
+    font-size: 0.75rem;
+    text-decoration: none;
+}
+
+.colophon th {
+    font-size: smaller;
+    font-weight: normal;
+    letter-spacing: 0.1em;
+    text-align: right;
+}
+
+.colophon td {
+    padding-left: 1em;
+}
+
+@media screen and (max-width: 40em) {
+    html {
+        font-size: 87.5%;
+    }
+    blockquote, ol, ul {
+        padding-left: 2rem;
+    }
+    blockquote {
+        padding-right: 0;
+    }
+    blockquote:before {
+        height: 1.25rem;
+        width: 1.25rem;
+    }
+    pre {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
