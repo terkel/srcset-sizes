@@ -7,7 +7,7 @@
 }
 
 html {
-    font-family: "Hiragino Mincho ProN", "Yu Mincho", "Open Sans", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+    font-family: "Noto Serif JP", serif;
     font-size: 100%;
     line-height: 1.75;
 }
@@ -24,8 +24,13 @@ hr {
     margin: 3.5em 0;
 }
 
-h1, h2, h3, h4, h5, h6, em, b {
-    font-family: "Open Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic", "Meiryo", sans-serif;
+h1, h2, h3, h4, h5, h6, em, b,
+strong, figure, table,
+a[href^="#fn-"],
+a[href^="#fnref-"],
+.author,
+.footnotes {
+    font-family: "Noto Sans JP", sans-serif;
 }
 
 h1 {
@@ -83,8 +88,9 @@ ol, ul {
 pre,
 code,
 samp,
-kbd {
-    font-family: "Ubuntu Mono", "Menlo", "Consolas", monospace;
+kbd,
+var {
+    font-family: "Source Code Pro", "Noto Sans JP", monospace;
 }
 
 pre {
