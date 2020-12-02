@@ -16,6 +16,7 @@ body {
     margin: auto;
     max-width: 48em;
     padding: 1em;
+    -webkit-text-size-adjust: 100%;
 }
 
 hr {
@@ -85,12 +86,12 @@ ol, ul {
     padding-left: 3rem;
 }
 
-pre,
 code,
 samp,
 kbd,
 var {
     font-family: "Source Code Pro", "Noto Sans JP", monospace;
+    font-size: 1em;
 }
 
 pre {
@@ -111,6 +112,31 @@ kbd {
 em {
     font-style: normal;
     font-weight: bold;
+}
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+td,
+th {
+    padding: 0;
 }
 
 .author {
