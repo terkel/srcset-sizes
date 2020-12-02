@@ -26,11 +26,6 @@ a[href^="#fnref-"],
     font-family: "Merriweather Sans", "Yu Gothic", "YuGothic", "Hiragino Kaku Gothic proN", "Meiryo", sans-serif;
 }
 
-.yumincho,
-.hiraginomincho {
-    font-family: "Merriweather", "Yu Mincho", "YuMincho", "Hiragino Mincho ProN", serif;
-}
-
 @media (min-width: 75em) {
     html {
         font-size: 112.5%;
@@ -191,12 +186,6 @@ table .yes {
 @keyframes target-fade {
     0% { background-color: rgba(255, 255, 0, 1); }
     1000% { background-color: rgba(0, 0, 0, 0); }
-}
-
-/*! http://jsdo.it/mayuki/qAvH */
-@font-face {
-    font-family: 'Empty';
-    src: url('data:application/x-font-woff;base64,d09GRgABAAAAAAUEABEAAAAABywAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAABGRlRNAAABgAAAABkAAAAclfuTCkdERUYAAAGcAAAAHQAAACAAQQAET1MvMgAAAbwAAABSAAAAVojcczxjbWFwAAACEAAAAGgAAAGCVWwn7mN2dCAAAAJ4AAAABAAAAAQARAURZ2FzcAAAAnwAAAAIAAAACAAAABBnbHlmAAAChAAAAGEAAABoJ54Dp2hlYWQAAALoAAAALgAAADb6oSubaGhlYQAAAxgAAAAeAAAAJAe7DY1obXR4AAADOAAAADQAAABQQ9gARGxvY2EAAANsAAAADwAAACoBwAG4bWF4cAAAA3wAAAAfAAAAIABYADluYW1lAAADnAAAAKkAAAE0E/M4eXBvc3QAAARIAAAAdwAAANlTGIAkdmhlYQAABMAAAAAfAAAAJAO8K1R2bXR4AAAE4AAAABkAAABQP0AFVXdlYmYAAAT8AAAABgAAAAZzWlBMeNpjYGBgZACCk535hgxI4EyR8g0AKscELQAAAHjaY2BkYGDgA2IJBhBgYmAEQmEgZgHzGAAFGwBGAAAAeNpjYGSOZJzAwMrAwsLAwsDAwPQAQjMXMGQwCQD5DGwMELCAgWl/xvE/v4FMARA/JDE7lcGBgfcBA9uDfw8YGFhDmTQcmBjm37/OwAAA+58QBwAAeNpjYGBgZoBgGQZGBhCoAfIYwXwWhgQgLcIgABRhAbJ4GRQYFihwKegrxBs4PWD4/x+sHiLKgCTK+P/r/8f/Ux6w3n94f9P5CwrCUJMxACMbA1yKkQlIMKErgDhtaAAWsnQBAHCFFscARAURAAEAAf//AA942mNgYnBhYGBKYQ1lYGZgZ9DbyMigb7OJnYXhrdFGNtY7NpuYmYBMho3MIGFWkPAmdjbGPzabGEHixoKKgqqKgoouTAr/VBhn/MtgDf212oXlLAMDAyMDEjBkAACuEhZiAAAAeNpjYGRgYGCfOfPJcb8v8fw2XxnsORhA4EyR8g1kmimFNRRIcTAwgXgAfkMLSgAAeNpjYGRgYA39e4OBgX8BAxAwpTAwMqACEQBaLwNbAAB42mN6w+DCwcDAAMIsUMy0ioGBNRRBMx4HYiDN8BiKgeKMgkDaG0KD5YCAfwEDAwBb/whZeNpjYGDQIQqaAABE8gN5AHjaY2BkYGAQYeBgYGIAARDJyAASc2DQAwkAAAYxAJIAeNptjrsOAVEURRfjMRQKhYhqaoXMTJBQ8wMmaDQkiMRj4lFolL6Nv7KHE0IU5951995n5wJFLjikMgXA1bw4Jd01TlOibOxI94wz1KgbZ6nSM84pMzHOixfGNyrExnd8rgw5MGdPn42cI2cGei85sWb6pX/I+8mMng0HVuzYyg1oqNv/uztWdqb/JMnjOxupK9mM5Ma6PToanzZdmrTs9AilBYQPO2UklQAAAHjabc05DsJAFIPh9yeQsO8HmUwSlo5IwDnoAAkhGgpOD2HGJW4+yYVtiYV89na2f1mZkZBaSocuGTk9+gwYMmLMhCkz5ixYZpf7+3kt8tfj5pw7RBv307eFLKSXpaxkLddyI7dyJ5uoP0XrYOmqsHts/77RYyj0AHjaY2AUYPiX8oeBgUHeAUgwsIYCCUYGZCACAFwHAz4AeNrjYGANZYACDigmB4D0yTswMAAAI4MA2gAAAAABUExzWQAA') format('woff');
 }
 </style>
 <script>document.createElement('picture');</script>
@@ -796,25 +785,6 @@ table .yes {
         </tbody>
     </table>
 </footer>
-
-<div id="font-availability-test" style="height:0;overflow:hidden;position:absolute;visibility:hidden;"><span style="font-family:'Empty';">あ</span></div>
-
-<script>
-// http://jsdo.it/mayuki/qAvH
-function isFontInstalled(fontName) {
-    var testNode = document.querySelector('#font-availability-test span');
-    testNode.style.fontFamily = "'" + fontName + "', 'Empty'";
-    return !!testNode.offsetWidth;
-}
-
-window.addEventListener('DOMContentLoaded', function () {
-    setTimeout(function () {
-        document.documentElement.className +=
-            (isFontInstalled('Yu Mincho') || isFontInstalled('YuMincho')? ' ': ' no-') + 'yumincho' +
-            (isFontInstalled('Hiragino Mincho ProN')? ' ': ' no-') + 'hiraginomincho';
-    }, 100);
-});
-</script>
 
 </body>
 </html>
