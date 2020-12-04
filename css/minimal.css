@@ -161,6 +161,8 @@ var {
     background-color: rgba(0, 0, 0, 0.05);
     border-radius: 0.25em;
     padding: 0.125em 0.25em;
+    margin-left: 0.125em;
+    margin-right: 0.125em;
 }
 
 var {
@@ -173,6 +175,8 @@ pre samp,
 pre var {
     background-color: transparent;
     padding: 0;
+    margin-left: 0;
+    margin-right: 0;
 }
 
 em {
