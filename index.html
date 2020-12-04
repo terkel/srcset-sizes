@@ -2,9 +2,8 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>srcset と sizes</title>
-<meta name="description" content="レスポンシブ画像のための新しい手法、secset と sizes 属性を紹介">
+<title>srcsetとsizes</title>
+<meta name="description" content="レスポンシブ画像のための新しい手法、secsetとsizesを紹介">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="preconnect" href="https://s3-ap-northeast-1.amazonaws.com" crossorigin>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,23 +16,23 @@
 <div role="main">
 
 <header role="banner">
-    <h1>srcset <i class="amp">と</i> sizes</h1>
-    <p class="author"><b>エリック・ポーティス</b> <small>文と絵</small><br><small><b>鈴木丈</b> 訳</small></p>
+    <h1>srcset<span class="amp">と</span>sizes</h1>
+    <p class="author">エリック・ポーティス<br>鈴木丈&ensp;訳</p>
 </header>
 
 <section id="part-1">
 
-<h2>パート 1: メディア・クエリのどこがまずいのか?</h2>
+<h2>パート1：メディア・クエリのどこがまずいのか？</h2>
 
-<p>そう、もし君がウェブサイトを作っている時代が <a href="http://1997.webhistory.org/www.lists/www-talk.1993q1/0182.html">1993 年 2 月 23 日</a> から <a href="http://alistapart.com/article/responsive-web-design/">2010 年 5 月 25 日</a> の間だったら、画像の扱いなんてチョロかったね! それはこんなふうに単純だった。</p>
+<p>そう、もし君がウェブサイトを作っている時代が<a href="http://1997.webhistory.org/www.lists/www-talk.1993q1/0182.html">1993年2月23日</a>から<a href="http://alistapart.com/article/responsive-web-design/">2010年5月25日</a>の間だったら、画像の扱いなんてチョロかったね！&ensp;それはこんなふうに単純だった。</p>
 
 <ul>
 <li>幅の固定されたレイアウトをにらみつける</li>
-<li>画像が<em>きっかり</em>何ピクセルかを測る—その画像は<em>あらゆる</em>ユーザーの画面で<em>変わらない</em>スペースを占めることになる</li>
-<li>Photoshop のエンジンをかける</li>
+<li>画像が<em>きっかり</em>何ピクセルかを測る&#x2015;&#x2015;その画像は<em>あらゆる</em>ユーザーの画面で<em>変わらない</em>スペースを占めることになる</li>
+<li>Photoshopのエンジンをかける</li>
 <li>画像をさっき測ったとおりのサイズで「ウェブ用に保存」する</li>
-<li>それを <code>&lt;img&gt;</code> タグでマークアップする</li>
-<li>グラスにビールを注ぎ (または新鮮なグリンピースの缶を開け)、仕事がうまくいったことを祝う</li>
+<li>それを<code>&lt;img&gt;</code>タグでマークアップする</li>
+<li>グラスにビールを注ぎ（または新鮮なグリンピースの缶を開け）、仕事がうまくいったことを祝う</li>
 </ul>
 
 <figure>
@@ -85,23 +84,23 @@
                 32em">
 </figure>
 
-<p>ときおり聡明なる預言者が荒野から現れては、この手法に潜む問題について <a href="http://alistapart.com/article/dao/">深遠な真実</a> を説くこともあった。それでもこのやり方は、20 年もの間、ウェブ・デザイナーを生業とするものたちに受け入れられてきた。</p>
+<p>ときおり聡明なる預言者が荒野から現れては、この手法に潜む問題について<a href="http://alistapart.com/article/dao/">深遠な真実</a>を説くこともあった。それでもこのやり方は、20年もの間、ウェブ・デザイナーを生業とするものたちに受け入れられてきた。</p>
 
 <p>しかし、時代は変わる。</p>
 
-<p>4 年前、イーサン・マーコットが <a href="http://alistapart.com/article/responsive-web-design/">ある記事を書いた</a>。その 13 日後、スティーヴ・ジョブズは <a href="http://ja.wikipedia.org/wiki/IPhone_4">ある携帯電話</a> を発表した。突如として 「<a href="http://unstoppablerobotninja.com/entry/fluid-images">フルード (流動的)</a>」で「<a href="http://ja.wikipedia.org/wiki/%E3%83%AC%E3%83%86%E3%82%A3%E3%83%8A%E3%83%87%E3%82%A3%E3%82%B9%E3%83%97%E3%83%AC%E3%82%A4">レティナ (高精細)</a>」な画像が重要になった。そしてそれ以来、そこらじゅうから<a href="https://www.google.com/search?q=site:lists.whatwg.org%20responsive%20images">歯ぎしり</a>が聞こえてくる。</p>
+<p>4年前、イーサン・マーコットが<a href="http://alistapart.com/article/responsive-web-design/">ある記事を書いた</a>。その13日後、スティーヴ・ジョブズは<a href="http://ja.wikipedia.org/wiki/IPhone_4">ある携帯電話</a>を発表した。突如として 「<a href="http://unstoppablerobotninja.com/entry/fluid-images">フルード（流動的）</a>」で「<a href="http://ja.wikipedia.org/wiki/%E3%83%AC%E3%83%86%E3%82%A3%E3%83%8A%E3%83%87%E3%82%A3%E3%82%B9%E3%83%97%E3%83%AC%E3%82%A4">レティナ（高精細）</a>」な画像が重要になった。そしてそれ以来、そこらじゅうから<a href="https://www.google.com/search?q=site:lists.whatwg.org%20responsive%20images">歯ぎしり</a>が聞こえてくる。</p>
 
 <figure>
-    <video id="oops" loop autoplay>
+    <video id="oops" loop autoplay muted controls>
         <source src="./video/oops/oops-1080.mp4" type="video/mp4">
         <source src="./video/oops/oops-1080.ogv" type="video/ogg">
     </video>
 </figure>
 
-<p>フルードとかレティナとかレスポンシブとかいった画像を実装することになったとき、僕らはまずどうするだろうか。直感的に、レスポンシブ・レイアウトで使うのと同じ道具に手を伸ばすんじゃないかな。そう、メディア・クエリだ!</p>
+<p>フルードとかレティナとかレスポンシブとかいった画像を実装することになったとき、僕らはまずどうするだろうか。直感的に、レスポンシブ・レイアウトで使うのと同じ道具に手を伸ばすんじゃないかな。そう、メディア・クエリだ！</p>
 
 <figure>
-    <img alt="3 つのサイズのブロックに張り紙をする豆男。「小さい穴にはこれ」「中くらいの穴にはこれ」「大きい穴にはこれ」"
+    <img alt="3つのサイズのブロックに張り紙をする豆男。「小さい穴にはこれ」「中くらいの穴にはこれ」「大きい穴にはこれ」"
         srcset="./img/media-queries/full.png 2221w,
                 ./img/media-queries/half.png 1111w,
                 ./img/media-queries/quarter.png 556w,
@@ -112,7 +111,7 @@
                 46em">
 </figure>
 
-<p>ブラウザーは、まだ読み込んでないウェブサイトについてはなんにも知らないけど、自分たちが描画をおこなう内部の環境については、つねに把握している。ビューポートのサイズや、ユーザーの画面の解像度や、そういったこと。メディア・クエリの狙いは、ウェブ・ディベロッパーが特定の環境に向けてなにかできるようにしよう、というものだ。もしビューポートの幅が 1,000px 以上なら、サイドバーを左側に表示せよ。そうでなければ、そいつをメインのコンテンツの下に。もしユーザーの画面がレティナなら大きな画像を使え。そうでなければ小さなやつ。</p>
+<p>ブラウザーは、まだ読み込んでないウェブサイトについてはなんにも知らないけど、自分たちが描画をおこなう内部の環境については、つねに把握している。ビューポートのサイズや、ユーザーの画面の解像度や、そういったこと。メディア・クエリの狙いは、ウェブ・ディベロッパーが特定の環境に向けてなにかできるようにしよう、というものだ。もしビューポートの幅が1,000px以上なら、サイドバーを左側に表示せよ。そうでなければ、そいつをメインのコンテンツの下に。もしユーザーの画面がレティナなら大きな画像を使え。そうでなければ小さなやつ。</p>
 
 <p>カンタンカンタン。</p>
 
@@ -131,7 +130,7 @@
 <p>でも残念なことに、レスポンシブ画像では話が違ってくる。多くの場合、実際に画像のソースを取ってくるのにメディア・クエリを使うと「<a href="http://www.xanthir.com/b4Su0">クソまずいこと</a>」になるんだ。</p>
 
 <figure>
-    <img alt="グリンピースをほおばったままびっくりする豆男。「へっ??」"
+    <img alt="グリンピースをほおばったままびっくりする豆男。「へっ？」"
         srcset="./img/gulp/full.png 2244w,
                 ./img/gulp/half.png 1122w,
                 ./img/gulp/quarter.png 561w,
@@ -142,21 +141,21 @@
                 46em">
 </figure>
 
-<p>メディア・クエリを使ってレスポンシブ画像のソースを取ってくるとまずいことになるのはなぜか、その理由をちょっと探ってみよう。まず、ほとんどのデザイナーは、ページのレイアウトをレスポンシブに変化させるとき、1 つの変数 (ビューポートの幅) をもとにすることに慣れきってる。でもレスポンシブ<em>画像</em><sup id="fnref-1"><a href="#fn-1">1</a></sup>を扱うとなると、3 つもの変数がからんでくるんだ。</p>
+<p>メディア・クエリを使ってレスポンシブ画像のソースを取ってくるとまずいことになるのはなぜか、その理由をちょっと探ってみよう。まず、ほとんどのデザイナーは、ページのレイアウトをレスポンシブに変化させるとき、1つの変数（ビューポートの幅）をもとにすることに慣れきってる。でもレスポンシブ<em>画像</em><sup id="fnref-1"><a href="#fn-1">1</a></sup>を扱うとなると、3つもの変数がからんでくるんだ。</p>
 
 <ul>
-<li>レイアウトにおける画像の (CSS ピクセルでの) 描画サイズ</li>
+<li>レイアウトにおける画像の（CSSピクセルでの）描画サイズ</li>
 <li>画面密度</li>
 <li>サイズの異なる画像ファイルそれぞれの寸法</li>
 </ul>
 
 <p>つまり、メディア・クエリがややこしくなるってこと。</p>
 
-<p>この 3 つがわかれば、問題の解決はどうってことない。ひと組のソースがあったら、その中で寸法が <var>描画サイズ</var> × <var>画面密度</var> より大きくて、かついちばん小さなやつを選べばいい。</p>
+<p>この3つがわかれば、問題の解決はどうってことない。ひと組のソースがあったら、その中で寸法が<var>描画サイズ</var>×<var>画面密度</var>より大きくて、かついちばん小さなやつを選べばいい。</p>
 
-<p>だがしかし! 残念ながら <var>描画サイズ</var> ってやつは突き止めるのにちょっと手こずるんだ。ウェブ・ディベロッパーはそいつを知ることが<em>できない</em>。なぜなら、画像のサイズを固定せずフレキシブルにすると、画像は伸び縮みするので、レスポンシブ・レイアウトでは <var>描画サイズ</var> はあらゆる可能性が考えられる。そしてびっくりするかもしれないけど、ブラウザーが画像の読み込みをはじめるとき、ブラウザーも <var>描画サイズ</var> をまだ知らないんだ。<var>描画サイズ</var> が決まるのはそのページの CSS 次第なんだけど、CSS が解析されるのは、画像の読み込みがはじまったずっとあとなんだ。</p>
+<p>だがしかし！&ensp;残念ながら<var>描画サイズ</var>ってやつは突き止めるのにちょっと手こずるんだ。ウェブ・ディベロッパーはそいつを知ることが<em>できない</em>。なぜなら、画像のサイズを固定せずフレキシブルにすると、画像は伸び縮みするので、レスポンシブ・レイアウトでは<var>描画サイズ</var>はあらゆる可能性が考えられる。そしてびっくりするかもしれないけど、ブラウザーが画像の読み込みをはじめるとき、ブラウザーも<var>描画サイズ</var>をまだ知らないんだ。<var>描画サイズ</var>が決まるのはそのページのCSS次第なんだけど、CSSが解析されるのは、画像の読み込みがはじまったずっとあとなんだ。</p>
 
-<p>メディア・クエリを画像ソースに当てはめると、この <var>描画サイズ</var> がわからないという問題をうまく避けられ避けられるように見える。メディア・クエリによって <var>描画サイズ</var> は次の 2 つから求められるようになり…</p>
+<p>メディア・クエリを画像ソースに当てはめると、この<var>描画サイズ</var>がわからないという問題をうまく避けられ避けられるように見える。メディア・クエリによって<var>描画サイズ</var>は次の2つから求められるようになり……</p>
 
 <ul>
 <li>ビューポートの寸法</li>
@@ -165,7 +164,7 @@
 
 <p>そして製作者は、メディア・クエリでビューポートの寸法と画面密度だけを指定すればいい。そのほかの全部について、<s>いくつかの</s>たくさんの<s>カンタンな</s>ややこしい計算を済ませたあとでね。</p>
 
-<p>どんな計算かって? ちょっとためしてみよう。</p>
+<p>どんな計算かって？&ensp;ちょっとためしてみよう。</p>
 
 <figure>
     <img alt="学校の机で、電卓と鉛筆を手に準備万端の豆男"
@@ -179,23 +178,23 @@
                 46em">
 </figure>
 
-<p>(注意。僕はシンプルに書こうと努めてるけど、これから親愛なる読者諸君のお目にかける例は、メディア・クエリの計算の過程がどれだけ退屈かつ間違いやすいかを示すためだけにあるんだ。だからもしそのことが飲み込めたと思ったら、すぐに <a href="#part-2">パート 2</a> に飛んでもぜんぜんかまわないよ。)</p>
+<p>（注意。僕はシンプルに書こうと努めてるけど、これから親愛なる読者諸君のお目にかける例は、メディア・クエリの計算の過程がどれだけ退屈かつ間違いやすいかを示すためだけにあるんだ。だからもしそのことが飲み込めたと思ったら、すぐに<a href="#part-2">パート 2</a>に飛んでもぜんぜんかまわないよ。）</p>
 
-<p>手元に同じ画像の 3 つのバージョンがあるとしよう。</p>
+<p>手元に同じ画像の3つのバージョンがあるとしよう。</p>
 
 <ul>
-<li><code>large.jpg</code> (1024 x 768)</li>
-<li><code>medium.jpg</code> (640 x 480)</li>
-<li><code>small.jpg</code> (320 x 240)</li>
+<li><code>large.jpg</code>（1024 × 768）</li>
+<li><code>medium.jpg</code>（640 × 480）</li>
+<li><code>small.jpg</code>（320 × 240）</li>
 </ul>
 
-<p>そして、そのうちの 1 つを取り出し、フレキシブルなグリッドの中で読み込みたいとする。グリッドのカラムは、はじめは 1 つだけど、ビューポートが大きければ 3 つに切り替わる。<a href="http://ericportis.com/assets/2014-03-24-srcset-sizes/wolves/">こんなふうに</a>。</p>
+<p>そして、そのうちの1つを取り出し、フレキシブルなグリッドの中で読み込みたいとする。グリッドのカラムは、はじめは1つだけど、ビューポートが大きければ3つに切り替わる。<a href="http://ericportis.com/assets/2014-03-24-srcset-sizes/wolves/">こんなふうに</a>。</p>
 
-<p>さらに、1x と 2x の <code>デバイスピクセル比</code> をサポートしたい。</p>
+<p>さらに、1xと2xの<code>デバイスピクセル比</code>をサポートしたい。</p>
 
-<p>さてメディア・クエリをどうやって組み立てるか? 最初から見ていこう。</p>
+<p>さてメディア・クエリをどうやって組み立てるか？&ensp;最初から見ていこう。</p>
 
-<p><code>large.jpg</code> は本当に必要なときにだけ読み込まれるべきだ。つまり <code>small.jpg</code> と <code>medium.jpg</code> がどちらも小さすぎるときだけ。もっと正確に言うと、次の式が成り立つときだけ、<code>large.jpg</code> が読み込まれてほしい。</p>
+<p><code>large.jpg</code>は本当に必要なときにだけ読み込まれるべきだ。つまり<code>small.jpg</code>と<code>medium.jpg</code>がどちらも小さすぎるときだけ。もっと正確に言うと、次の式が成り立つときだけ、<code>large.jpg</code>が読み込まれてほしい。</p>
 
 <pre><code><var>描画される幅</var> × <var>画面密度</var>
     &gt; <var>次に小さいファイルの幅</var>
@@ -208,7 +207,7 @@
     <var>ビューポートの幅</var>
 </code></pre>
 
-<p>次に小さいファイルは <code>medium.jpg</code> なので、</p>
+<p>次に小さいファイルは<code>medium.jpg</code>なので、</p>
 
 <pre><code><var>次に小さいファイルの幅</var> = 640px
 </code></pre>
@@ -221,7 +220,7 @@
   &gt; 640px
 </code></pre>
 
-<p><var>ビューポートの幅</var> を中心にすると次のようにも書ける。</p>
+<p><var>ビューポートの幅</var>を中心にすると次のようにも書ける。</p>
 
 <pre><code><var>ビューポートの幅</var> &gt;
   640px ÷
@@ -231,15 +230,15 @@
 
 <p>そしてここからメディア・クエリを組み立てるには、<var>ビューポートに対する画像の相対的な幅</var>と<var>画面密度</var>がとる可能性のある値すべてについて、それぞれ対応する<var>ビューポートの幅</var>を求めなきゃいけない。</p>
 
-<p><var>ビューポートに対する画像の相対的な幅</var>は次の 2 つのうちどちらかだ。ブレイクポイント (36em) に届く前なら 100<a href="http://www.w3.org/TR/css3-values/#viewport-relative-lengths">vw</a>、それ以降なら 33.3vw。</p>
+<p><var>ビューポートに対する画像の相対的な幅</var>は次の2つのうちどちらかだ。ブレイクポイント（36em）に届く前なら100<a href="http://www.w3.org/TR/css3-values/#viewport-relative-lengths">vw</a>、それ以降なら33.3vw。</p>
 
-<p><var>画面密度</var>については…なんというか、<a href="http://en.wikipedia.org/wiki/List_of_displays_by_pixel_density">たくさんの可能性が考えられる</a>んだけど、僕たちがサポートする <code>device-pixel-ratio</code> は 1x と 2x だけと決めた。</p>
+<p><var>画面密度</var>については……なんというか、<a href="http://en.wikipedia.org/wiki/List_of_displays_by_pixel_density">たくさんの可能性が考えられる</a>んだけど、僕たちがサポートする<code>device-pixel-ratio</code>は1xと2xだけと決めた。</p>
 
-<p><var>ビューポートに対する画像の相対的な幅</var>の可能性が 2 つに、<var>画面密度</var>の可能性が 2 つ。これらをかけ合わせると 4 つのシナリオを考えなきゃいけないってことになる。ひとつずつ見ていこう。</p><div class="se-section-delimiter"></div>
+<p><var>ビューポートに対する画像の相対的な幅</var>の可能性が2つに、<var>画面密度</var>の可能性が2つ。これらをかけ合わせると4つのシナリオを考えなきゃいけないってことになる。ひとつずつ見ていこう。</p><div class="se-section-delimiter"></div>
 
-<h3 id="1x-でブレイクポイント以下の場合">1x でブレイクポイント以下の場合</h3>
+<h3 id="1x-でブレイクポイント以下の場合">1xでブレイクポイント以下の場合</h3>
 
-<p>ここでのブレイクポイントは 36em なので、次のことはわかってる。</p>
+<p>ここでのブレイクポイントは36emなので、次のことはわかってる。</p>
 
 <pre><code><var>ビューポートの幅</var> &lt; 36em
 </code></pre>
@@ -250,65 +249,65 @@
   640px ÷ ( 100vw × 1x ) = 640px = 40em
 </code></pre>
 
-<p>この 2 つを合わせると、ありえない結果になる。</p>
+<p>この2つを合わせると、ありえない結果になる。</p>
 
 <pre><code>36em &gt; <var>ビューポートの幅</var> &gt; 40em
 </code></pre>
 
-<p>つまり僕たちはこのシナリオは捨ててしまっていい—1x でレイアウトがシングル・カラムのとき、<code>large.jpg</code> が必要になることはない。 </p>
+<p>つまり僕たちはこのシナリオは捨ててしまっていい&#x2015;&#x2015;1xでレイアウトがシングル・カラムのとき、<code>large.jpg</code>が必要になることはない。 </p>
 
-<h3 id="2x-でブレイクポイント以下の場合">2x でブレイクポイント以下の場合</h3>
+<h3 id="2x-でブレイクポイント以下の場合">2xでブレイクポイント以下の場合</h3>
 
 <p>まずはさっきと同じ。</p>
 
 <pre><code><var>ビューポートの幅</var> &lt; 36em
 </code></pre>
 
-<p>でも今度は 2x に当てはめる。</p>
+<p>でも今度は2xに当てはめる。</p>
 
 <pre><code><var>ビューポートの幅</var> &gt;
   640px ÷ ( 100vw × 2x ) = 320px = 20em
 </code></pre>
 
-<p>この 2 つを組み合わせると…</p>
+<p>この2つを組み合わせると……</p>
 
 <pre><code>36em &gt; <var>ビューポートの幅</var> &gt; 20em
 </code></pre>
 
-<p>つまり、2x の画面で <code>large.jpg</code> を読み込んでほしいのは、ビューポートがこの範囲内だった場合ということになる。</p>
+<p>つまり、2xの画面で<code>large.jpg</code>を読み込んでほしいのは、ビューポートがこの範囲内だった場合ということになる。</p>
 
-<h3 id="1x-でブレイクポイント以上の場合">1x でブレイクポイント以上の場合</h3>
+<h3 id="1x-でブレイクポイント以上の場合">1xでブレイクポイント以上の場合</h3>
 
 <p>今回はブレイクポイント以上なので、こう。</p>
 
 <pre><code><var>ビューポートの幅</var> &gt; 36em
 </code></pre>
 
-<p>そして 1x の画面では 3 カラム・レイアウトなので、こう。</p>
+<p>そして1xの画面では3カラム・レイアウトなので、こう。</p>
 
 <pre><code><var>ビューポートの幅</var> &gt;
   640px ÷ ( 33.3vw × 1x ) = 1920px = 120em
 </code></pre>
 
-<p>ビューポートが 120em より大きいならもちろん 36em より大きいわけだから、36em の方は忘れちゃっていい。1x の画面で <code>large.jpg</code> を読み込みたいのは、次の場合ということになる。</p>
+<p>ビューポートが120emより大きいならもちろん36emより大きいわけだから、36emの方は忘れちゃっていい。1xの画面で<code>large.jpg</code>を読み込みたいのは、次の場合ということになる。</p>
 
 <pre><code><var>ビューポートの幅</var> &gt; 120em
 </code></pre>
 
-<p>よし、次で最後だ!</p>
+<p>よし、次で最後だ！</p>
 
-<h3 id="2x-でブレイクポイント以上の場合">2x でブレイクポイント以上の場合</h3>
+<h3 id="2x-でブレイクポイント以上の場合">2xでブレイクポイント以上の場合</h3>
 
 <pre><code><var>ビューポートの幅</var> &gt; 36em
 </code></pre>
 
-<p>…そして…</p>
+<p>……そして……</p>
 
 <pre><code><var>ビューポートの幅</var> &gt;
   640px ÷ ( 33.3vw × 2x ) = 960px = 60em
 </code></pre>
 
-<p>…2x の画面で <code>large.jpg</code> を読み込むのは、この場合。</p>
+<p>……2xの画面で<code>large.jpg</code>を読み込むのは、この場合。</p>
 
 <pre><code><var>ビューポートの幅</var> &gt; 60em
 </code></pre>
@@ -320,9 +319,9 @@
 ( (min-device-pixel-ratio: 1.5) and (min-width: 60.001em) )
 </code></pre>
 
-<p>これと同じ計算を <code>medium.jpg</code> 用に繰り返すのは、読者の練習問題としておこう。</p>
+<p>これと同じ計算を<code>medium.jpg</code>用に繰り返すのは、読者の練習問題としておこう。</p>
 
-<p>こうして出来上がったのが、<code>&lt;picture&gt;</code> の最初の提案にのっとったこんなマークアップ。</p>
+<p>こうして出来上がったのが、<code>&lt;picture&gt;</code>の最初の提案にのっとったこんなマークアップ。</p>
 
 <pre><code>&lt;picture&gt;
 
@@ -342,11 +341,11 @@
 &lt;/picture&gt;
 </code></pre>
 
-<p>うっ、頭痛が…!</p>
+<p>うっ、頭痛が……！</p>
 
-<p>なにしろこのマークアップの山は、<code>device-pixel-ratio</code> が 2 より大きいか 1 より小さい場合をサポートしてないし、2 と 1 の間の値にしてもサポートは不十分。もし <code>device-pixel-ratio</code> をより広くサポートしようとしたら、考えなきゃいけないシナリオもぐんと増える。</p>
+<p>なにしろこのマークアップの山は、<code>device-pixel-ratio</code>が2より大きいか1より小さい場合をサポートしてないし、2と1の間の値にしてもサポートは不十分。もし<code>device-pixel-ratio</code>をより広くサポートしようとしたら、考えなきゃいけないシナリオもぐんと増える。</p>
 
-<p>そしてこのマークアップの<em>最悪</em>なところは、そこに含まれる値を 1 つでも変更しようとしたときにあきらかになる。ソース画像のサイズ、サポートするデバイスの解像度、または画像のサイズに関わるレイアウトのアスペクト比—これらを変更するたび、僕たちはあの計算をぜんぶ、やり直さいないといけない。</p>
+<p>そしてこのマークアップの<em>最悪</em>なところは、そこに含まれる値を1つでも変更しようとしたときにあきらかになる。ソース画像のサイズ、サポートするデバイスの解像度、または画像のサイズに関わるレイアウトのアスペクト比—これらを変更するたび、僕たちはあの計算をぜんぶ、やり直さいないといけない。</p>
 
 <figure>
     <img alt="食べたグリンピースをトイレで吐く豆男"
@@ -360,21 +359,21 @@
                 46em">
 </figure>
 
-<p>さあ、<a href="#part-2">パート 2</a> へ急ごう。</p><div class="se-section-delimiter"></div>
+<p>さあ、<a href="#part-2">パート2</a>へ急ごう。</p><div class="se-section-delimiter"></div>
 
 </section>
 
 <section id="part-2">
 
-<h2>パート 2: <code>srcset</code> + <code>sizes</code> = 最高!</h2>
+<h2>パート2：srcset＋sizes＝最高！</h2>
 
-<p>どうやらメディア・クエリはこの仕事には向いてないらしい。さて、どうしよう?</p>
+<p>どうやらメディア・クエリはこの仕事には向いてないらしい。さて、どうしよう？</p>
 
 <p>ここで、さっき見たレスポンシブ画像の基本となる変数のリストに戻って、それらが<em>いつ</em>変化し、<em>誰が何を知っているのか</em>を考えてみよう。</p>
 
 <table>
     <thead>
-        <tr><th>変数</th><th>製作者がコードを書くとき</th><th>ブラウザーがページを読み込むとき</th></tr>
+        <tr><th>変数</th><th>製作者が<br>コードを書くとき</th><th>ブラウザーが<br>ページを読み込むとき</th></tr>
     </thead>
     <tbody>
         <tr><th>ビューポートの寸法</th><td class="no">知らない</td><td class="yes">知ってる</td></tr>
@@ -384,29 +383,29 @@
     </tbody>
 </table>
 
-<p>一方が「知ってる」のとき、もう一方は必ず「知らない」である点に注目! 製作者とブラウザーが知ってることは異なり、互いにおぎない合ってる。我らは鍵の神、彼らは門の神。僕らのパワーをひとつに合わせれば…</p>
+<p>一方が「知ってる」のとき、もう一方は必ず「知らない」である点に注目！&ensp;製作者とブラウザーが知ってることは異なり、互いにおぎない合ってる。我らは鍵の神、彼らは門の神。僕らのパワーをひとつに合わせれば……</p>
 
-<p>このギャップをどう埋めるか?</p>
+<p>このギャップをどう埋めるか？</p>
 
-<p>メディア・クエリは災害対策の詰め合わせみたいなものだ。僕たちはブラウザーにこう話しかける。「なあ、僕はビューポートがどのくらいの大きさになるかわからないんだけど、でももしこのくらいの大きさなら、このファイルを使ってほしい。もしもっと大きければ、こっち。あと、こっちのやつは画面がレティナだった場合に使うけど、でもレイアウトが 3 カラムに切り替わったらそれじゃなくて…」。僕らは様々な可能性についてのラベルをファイルに貼っていく。そのラベルに書いてある内容は、ブラウザーは「知ってる」ことだけど、コードを書いてる僕らは「知らない」ことだ。</p>
+<p>メディア・クエリは災害対策の詰め合わせみたいなものだ。僕たちはブラウザーにこう話しかける。「なあ、僕はビューポートがどのくらいの大きさになるかわからないんだけど、でももしこのくらいの大きさなら、このファイルを使ってほしい。もしもっと大きければ、こっち。あと、こっちのやつは画面がレティナだった場合に使うけど、でもレイアウトが3カラムに切り替わったらそれじゃなくて……」。僕らは様々な可能性についてのラベルをファイルに貼っていく。そのラベルに書いてある内容は、ブラウザーは「知ってる」ことだけど、コードを書いてる僕らは「知らない」ことだ。</p>
 
 <p>でもさっき見たとおり、実際にこれをやるのはとても骨が折れる。</p>
 
-<p>じゃあ、もしこの状態をひっくり返したらどうだろう?</p>
+<p>じゃあ、もしこの状態をひっくり返したらどうだろう？</p>
 
-<p>ブラウザーに対してごちゃごちゃした災害対策を提供するかわりに、シンプルに<em>ブラウザーが知らないことを教えてやったら</em>? つまり、ビューポートに対する画像の相対的なサイズと、ソース・ファイルの寸法を。<em>僕ら</em>はこのどちらも知ってる。もしこの知ってることをブラウザーと共有できたら、ブラウザーはソースを選ぶのに必要なことがすべて手に入ることになるんじゃない?</p>
+<p>ブラウザーに対してごちゃごちゃした災害対策を提供するかわりに、シンプルに<em>ブラウザーが知らないことを教えてやったら</em>？&ensp;つまり、ビューポートに対する画像の相対的なサイズと、ソース・ファイルの寸法を。<em>僕ら</em>はこのどちらも知ってる。もしこの知ってることをブラウザーと共有できたら、ブラウザーはソースを選ぶのに必要なことがすべて手に入ることになるんじゃない？</p>
 
-<p>だよね! 実際、<a href="http://picture.responsiveimages.org/"><code>&lt;picture&gt;</code> 仕様の最新にしてもっとも偉大なる草稿</a> の、<code>sizes</code> 属性と、<code>srcset</code> の中の <code>w</code> ディスクリプターは、まさにそのためにあるんだ。さっきの表をもう一度見てみよう。</p>
+<p>だよね！&ensp;実際、<a href="http://picture.responsiveimages.org/"><code>&lt;picture&gt;</code>仕様の最新にしてもっとも偉大なる草稿</a>の、<code>sizes</code>属性と、<code>srcset</code>の中の<code>w</code>ディスクリプターは、まさにそのためにあるんだ。さっきの表をもう一度見てみよう。</p>
 
 <table>
     <thead>
-        <tr><th>変数</th><th>製作者がコードを書くとき</th><th>ブラウザーがページを読み込むとき</th></tr>
+        <tr><th>変数</th><th>製作者が<br>コードを書くとき</th><th>ブラウザーが<br>ページを読み込むとき</th></tr>
     </thead>
     <tbody>
         <tr><th>ビューポートの寸法</th><td class="no">知らない</td><td class="yes">知ってる</td></tr>
-        <tr><th>ビューポートに対する画像の相対的な幅</th><td class="yes">知ってる</td><td><s class="no">知らない</s> <span class="yes">知ってる!</span> <code>sizes</code> があれば!</td></tr>
+        <tr><th>ビューポートに対する画像の相対的な幅</th><td class="yes">知ってる</td><td><s class="no">知らない</s> <span class="yes">知ってる！</span> <code>sizes</code>があれば！</td></tr>
         <tr><th>画面密度</th><td class="no">知らない</td><td class="yes">知ってる</td></tr>
-        <tr><th>ソース・ファイルの寸法</th><td class="yes">知ってる</td><td><s class="no">知らない</s> <span class="yes">知ってる!</span> <code>srcset</code> があれば!</td></tr>
+        <tr><th>ソース・ファイルの寸法</th><td class="yes">知ってる</td><td><s class="no">知らない</s> <span class="yes">知ってる！</span> <code>srcset</code>があれば！</td></tr>
     </tbody>
 </table>
 
@@ -422,11 +421,11 @@
                 46em">
 </figure>
 
-<p>これを詳しく見る前に、確認しておきたいことが 3 つある。</p>
+<p>これを詳しく見る前に、確認しておきたいことが3つある。</p>
 
-<p>まず第一に、これらを実装しているブラウザーはまだない。見通しは明るい<sup id="fnref-2"><a href="#fn-2">2</a></sup>けど、仕様はまだ流動的だ (画像のサイズが流動的なのといっしょ)。だから使うのはちょっと待ってほしい。今はまだ動かないけど、もうすぐ使えるようになる。</p>
+<p>まず第一に、これらを実装しているブラウザーはまだない。見通しは明るい<sup id="fnref-2"><a href="#fn-2">2</a></sup>けど、仕様はまだ流動的だ（画像のサイズが流動的なのといっしょ）。だから使うのはちょっと待ってほしい。今はまだ動かないけど、もうすぐ使えるようになる。</p>
 
-<p>ふたつめ。かつて、<a href="http://lists.whatwg.org/htdig.cgi/whatwg-whatwg.org/2012-May/035855.html"><code>srcset</code></a> と呼ばれるレスポンシブ画像の提案があった。僕たちが話題にしている新しい提案も、<em>同じく <code>srcset</code> と呼ばれる</em>属性をもとにしている。古い <code>srcset</code> も新しい <code>srcset</code> も、カンマ区切りの <abbr>URL</abbr> のリストで <code>w</code> ディスクリプターを使うけど、それぞれの <code>w</code> は<em>まったく違う意味</em>なんだ! 古い <code>w</code> はメディア・クエリのショートハンドで、<em>ビューポート</em>の幅をあらわしてた。一方、新しい <code>w</code> は<em>ファイル</em>の幅をあらわす。僕らはこれから新しい <code>w</code> について見ていくので、今のところは、『メン・イン・ブラック』の記憶消去装置みたいなやつを使って、<code>srcset</code> と <code>w</code> について知ってることをぜんぶ忘れてほしい。</p>
+<p>ふたつめ。かつて、<a href="http://lists.whatwg.org/htdig.cgi/whatwg-whatwg.org/2012-May/035855.html"><code>srcset</code></a>と呼ばれるレスポンシブ画像の提案があった。僕たちが話題にしている新しい提案も、<em>同じく<code>srcset</code>と呼ばれる</em>属性をもとにしている。古い<code>srcset</code>も新しい<code>srcset</code>も、カンマ区切りの<abbr>URL</abbr>のリストで<code>w</code>ディスクリプターを使うけど、それぞれの<code>w</code>は<em>まったく違う意味</em>なんだ！&ensp;古い<code>w</code>はメディア・クエリのショートハンドで、<em>ビューポート</em>の幅をあらわしてた。一方、新しい<code>w</code>は<em>ファイル</em>の幅をあらわす。僕らはこれから新しい<code>w</code>について見ていくので、今のところは、『メン・イン・ブラック』の記憶消去装置みたいなやつを使って、<code>srcset</code>と<code>w</code>について知ってることをぜんぶ忘れてほしい。</p>
 
 <figure>
     <img alt="ピカッ"
@@ -440,21 +439,21 @@
                 46em">
 </figure>
 
-<p>忘れたかな? よし。</p>
+<p>忘れたかな？&ensp;よし。</p>
 
-<p>みっつめは、以前の <code>&lt;picture&gt;</code> 仕様を期待を込めて追っかけてたひとへのお知らせ。新しい <code>&lt;picture&gt;</code> 仕様でも、メディア・クエリによるソースの切り替えと、ソース URL での解像度ディスクリプターは有効だ。もし <a href="http://usecases.responsiveimages.org/#art-direction">アート・ディレクション</a> したり <a href="http://usecases.responsiveimages.org/#device-pixel-ratio-based-selection">固定サイズの画像を解像度によって出し分け</a> たりしてるなら、間違いなくこれらの機能を使うことになるだろう。でもシンプルに画像を伸び縮みさせるだけなら、ここで紹介する新しいツールが使える。</p>
+<p>みっつめは、以前の<code>&lt;picture&gt;</code>仕様を期待を込めて追っかけてたひとへのお知らせ。新しい<code>&lt;picture&gt;</code>仕様でも、メディア・クエリによるソースの切り替えと、ソースURLでの解像度ディスクリプターは有効だ。もし<a href="http://usecases.responsiveimages.org/#art-direction">アート・ディレクション</a>したり<a href="http://usecases.responsiveimages.org/#device-pixel-ratio-based-selection">固定サイズの画像を解像度によって出し分け</a>たりしてるなら、間違いなくこれらの機能を使うことになるだろう。でもシンプルに画像を伸び縮みさせるだけなら、ここで紹介する新しいツールが使える。</p>
 
-<p>オーケー。これできれいさっぱり、準備が整った。<a href="http://ericportis.com/assets/2014-03-24-srcset-sizes/wolves/">さっきの例</a> に戻って、今度は <code>srcset</code> と <code>sizes</code> を使ってみよう。</p>
+<p>オーケー。これできれいさっぱり、準備が整った。<a href="http://ericportis.com/assets/2014-03-24-srcset-sizes/wolves/">さっきの例</a>に戻って、今度は<code>srcset</code>と<code>sizes</code>を使ってみよう。</p>
 
-<p>確認しとくと、僕たちが用意した画像には 3 つのバージョンがある。</p>
+<p>確認しとくと、僕たちが用意した画像には3つのバージョンがある。</p>
 
 <ul>
-<li><code>large.jpg</code> (1024 x 768)</li>
-<li><code>medium.jpg</code> (640 x 480)</li>
-<li><code>small.jpg</code> (320 x 240)</li>
+<li><code>large.jpg</code>（1024 × 768）</li>
+<li><code>medium.jpg</code>（640 × 480）</li>
+<li><code>small.jpg</code>（320 × 240）</li>
 </ul>
 
-<p>そして 36em のブレイクポイントでグリッドが 1 カラムから 3 カラムに切り替わる。</p>
+<p>そして36emのブレイクポイントでグリッドが1カラムから3カラムに切り替わる。</p>
 
 <p>マークアップはこう。</p>
 
@@ -467,21 +466,21 @@
      alt="A rad wolf" /&gt;
 </code></pre>
 
-<p><a href="http://picture.responsiveimages.org/">“picture” 仕様</a> をもとにしてるのに <code>&lt;picture&gt;</code> 要素が見当たらない、って気づいたかもしれない。<code>srcset</code> と <code>sizes</code> 属性は <code>&lt;img&gt;</code> 要素にも組み込むことができるんだ。この例のように、シンプルで、「アート・ディレクション」も「画像フォーマットの切り替え」もいらないようなとき、レスポンシブ画像のマークアップには僕らの古い友人である <code>&lt;img&gt;</code> が使えるし、そうしたほうがいい。</p>
+<p><a href="http://picture.responsiveimages.org/">“picture”仕様</a>をもとにしてるのに<code>&lt;picture&gt;</code>要素が見当たらない、って気づいたかもしれない。<code>srcset</code>と<code>sizes</code>属性は<code>&lt;img&gt;</code>要素にも組み込むことができるんだ。この例のように、シンプルで、「アート・ディレクション」も「画像フォーマットの切り替え」もいらないようなとき、レスポンシブ画像のマークアップには僕らの古い友人である<code>&lt;img&gt;</code>が使えるし、そうしたほうがいい。</p>
 
-<p>おなじみの <code>&lt;img&gt;</code> に、新しい属性。ひとつずつ見ていこう。</p>
+<p>おなじみの<code>&lt;img&gt;</code>に、新しい属性。ひとつずつ見ていこう。</p>
 
 <pre><code>src="small.jpg"
 </code></pre>
 
-<p>おっと、これはちっとも新しくなかったね! この <code>src</code> はフォールバックで、<code>srcset</code> と <code>sizes</code> を理解できないブラウザーでも、今までと同じように画像を読み込むためのものなんだ。次!</p>
+<p>おっと、これはちっとも新しくなかったね！&ensp;この<code>src</code>はフォールバックで、<code>srcset</code>と<code>sizes</code>を理解できないブラウザーでも、今までと同じように画像を読み込むためのものなんだ。次！</p>
 
 <pre><code>srcset="large.jpg 1024w,
         medium.jpg 640w,
         small.jpg 320w"
 </code></pre>
 
-<p>こいつもほとんど説明いらないよね。<code>srcset</code> は、利用可能な画像の URL をカンマ区切りのリストで受け取る。それぞれの画像の幅は <code>w</code> ディスクリプターで指定する。もし画像を 1024 × 768 で「ウェブ用に保存」したなら、その画像は <code>srcset</code> 内で <code>1024w</code> と指定すればいい。簡単。</p>
+<p>こいつもほとんど説明いらないよね。<code>srcset</code>は、利用可能な画像のURLをカンマ区切りのリストで受け取る。それぞれの画像の幅は<code>w</code>ディスクリプターで指定する。もし画像を1024 × 768で「ウェブ用に保存」したなら、その画像は<code>srcset</code>内で<code>1024w</code>と指定すればいい。簡単。</p>
 
 <figure>
     <img alt="「中くらいの穴にはこれ」から「中くらいのブロック」に貼り替える豆男"
@@ -495,11 +494,11 @@
                 46em">
 </figure>
 
-<p>指定してるのは幅だけ、ってとこに注意。なんで高さも指定しないのかって? このレイアウトでの画像は幅で制御されてる。その幅は CSS で明示されてるけど、高さは指定されてない。実際のレスポンシブ画像のほとんども幅によって決まるので、仕様では幅だけを扱うことによってシンプルさを保とうとしてるんだ。</p>
+<p>指定してるのは幅だけ、ってとこに注意。なんで高さも指定しないのかって？&ensp;このレイアウトでの画像は幅で制御されてる。その幅はCSSで明示されてるけど、高さは指定されてない。実際のレスポンシブ画像のほとんども幅によって決まるので、仕様では幅だけを扱うことによってシンプルさを保とうとしてるんだ。</p>
 
-<p>将来的には、ファイルの高さも <code>h</code> ディスクリプターで指定できたほうがいい理由が <a href="https://github.com/ResponsiveImagesCG/picture-element/issues/85">いくつか</a> <a href="https://github.com/ResponsiveImagesCG/picture-element/issues/86">あるけど</a> (個人的にも、それは素晴らしいことだと思う)、今のところはまだ。</p>
+<p>将来的には、ファイルの高さも<code>h</code>ディスクリプターで指定できたほうがいい理由が<a href="https://github.com/ResponsiveImagesCG/picture-element/issues/85">いくつか</a>&ensp;<a href="https://github.com/ResponsiveImagesCG/picture-element/issues/86">あるけど</a>（個人的にも、それは素晴らしいことだと思う）、今のところはまだ。</p>
 
-<p>そして注意しておきたいのは、<code>srcset</code> の中のソースに、<code>1x</code>/<code>2x</code> といった解像度ディスクリプターを <code>w</code> ディスクリプターの<em>かわり</em>に指定することも<em>できる</em>けど、<code>1x</code>/<code>2x</code> と <code>w</code> は<em>混ぜて使わないこと</em>。こいつらを同じ <code>srcset</code> の中で使っちゃダメ。ゼッタイ。</p>
+<p>そして注意しておきたいのは、<code>srcset</code>の中のソースに、<code>1x</code>/<code>2x</code>といった解像度ディスクリプターを<code>w</code>ディスクリプターの<em>かわり</em>に指定することも<em>できる</em>けど、<code>1x</code>/<code>2x</code>と<code>w</code>は<em>混ぜて使わないこと</em>。こいつらを同じ<code>srcset</code>の中で使っちゃダメ。ゼッタイ。</p>
 
 <figure>
     <img alt="「2x」と「640w」の貼り紙を一緒にしたばかりに雷に打たれる豆男"
@@ -513,9 +512,9 @@
                 46em">
 </figure>
 
-<p>オーケー、これが <code>srcset</code> と <code>w</code>。</p>
+<p>オーケー、これが<code>srcset</code>と<code>w</code>。</p>
 
-<p>あとブラウザーがソースを選ぶために必要なのは、レイアウトの中で画像がどんなサイズで描画されるかだけ。そのためには <code>sizes</code> がある。さっきの例を見てみよう。</p>
+<p>あとブラウザーがソースを選ぶために必要なのは、レイアウトの中で画像がどんなサイズで描画されるかだけ。そのためには<code>sizes</code>がある。さっきの例を見てみよう。</p>
 
 <pre><code>sizes="(min-width: 36em) 33.3vw,
        100vw"
@@ -528,27 +527,27 @@
 
 <p>このようにメディア・クエリと長さを組み合わせる。ブラウザーは、マッチするものが見つかるまでメディア・クエリを見ていく。もし見つかれば、そのメディア・クエリとペアになった長さを、ソースを取ってくるパズルの最後のピース—描画される画像の幅、またはビューポートに対する相対的な幅として使う。</p>
 
-<p>「なんだって?」と、君は言うかもしれない。「メディア・クエリ? メディア・クエリはまずいって言ってなかったっけ?!」</p>
+<p>「なんだって？」と、君は言うかもしれない。「メディア・クエリ？&ensp;メディア・クエリはまずいって言ってなかったっけ？」</p>
 
-<p>僕が言ったのは、メディア・クエリをソースを選ぶメカニズムとして使うのはまずい、ってことなんだ。ここでやってるのはそれとは違う。ブラウザーがそのページの CSS で知ることになるブレイクポイントについて、ほんのちょっとだけ先回りして教えてあげてるんだ (このほんのちょっとの時間が <a href="http://andydavies.me/blog/2013/10/22/how-the-browser-pre-loader-makes-pages-load-faster/">すごく重要!</a>)。最初の例では、レイアウトのたった 1 つのブレイクポイント (36em) のために、いくつものクエリが無駄になってたのを覚えてるかな? 60em、20em、10em—ってのがとっちらかってたよね! その点、<code>sizes</code> のブレイクポイントは、そのページのブレイクポイントをそのまま反映したものになるはず。そしてそれぞれのメディア・クエリに続く長さが、そのメディア・クエリがマッチしたときの画像の幅を指定するんだ。</p>
+<p>僕が言ったのは、メディア・クエリをソースを選ぶメカニズムとして使うのはまずい、ってことなんだ。ここでやってるのはそれとは違う。ブラウザーがそのページのCSSで知ることになるブレイクポイントについて、ほんのちょっとだけ先回りして教えてあげてるんだ（このほんのちょっとの時間が<a href="http://andydavies.me/blog/2013/10/22/how-the-browser-pre-loader-makes-pages-load-faster/">すごく重要！</a>）。最初の例では、レイアウトのたった1つのブレイクポイント（36em）のために、いくつものクエリが無駄になってたのを覚えてるかな？&ensp;60em、20em、10em&#x2015;&#x2015;ってのがとっちらかってたよね！&ensp;その点、<code>sizes</code>のブレイクポイントは、そのページのブレイクポイントをそのまま反映したものになるはず。そしてそれぞれのメディア・クエリに続く長さが、そのメディア・クエリがマッチしたときの画像の幅を指定するんだ。</p>
 
-<p>というわけで、ブラウザーは必要な情報をすべて手に入れた。のろまで、なまけもので、間違ってばかりの僕ら人間が <a href="#part-1">パート 1</a> でやるはめになったような計算は、あとはブラウザーやってくれる。その間に僕らは、くつろいでグリンピースを食べはじめられる。神の意図されたように。</p>
+<p>というわけで、ブラウザーは必要な情報をすべて手に入れた。のろまで、なまけもので、間違ってばかりの僕ら人間が<a href="#part-1">パート1</a>でやるはめになったような計算は、あとはブラウザーやってくれる。その間に僕らは、くつろいでグリンピースを食べはじめられる。神の意図されたように。</p>
 
-<p>さらに! メディア・クエリの例では 1x と 2x の画面しかカバーできなかったのを覚えてるかな? こっちのマークアップなら<em>どんな</em> <code>device-pixel-ratio</code> でも対応できる。もうどの解像度をサポートするのが適当かと迷う必要はない。たとえ 2016 年に 4.8625x のスマートウォッチが登場したとしても、<code>srcset</code> と <code>sizes</code> ならカバーできる。</p>
+<p>さらに！&ensp;メディア・クエリの例では1xと2xの画面しかカバーできなかったのを覚えてるかな？&ensp;こっちのマークアップなら<em>どんな</em><code>device-pixel-ratio</code>でも対応できる。もうどの解像度をサポートするのが適当かと迷う必要はない。たとえ2016年に4.8625xのスマートウォッチが登場したとしても、<code>srcset</code>と<code>sizes</code>ならカバーできる。</p>
 
-<p>まだある! この解決策はブラウザーに選択の幅をもたらす。ソースと結びついたメディア・クエリは真か偽かのいずれかの結果になり、もし真なら、ブラウザーはそのソースを読み込まなきゃ<em>いけない</em>。でも <code>sizes</code> と <code>srcset</code> はそこまで頑固じゃない。仕様では、通信が遅かったり高くついたりするとき、小さいソースを読み込むオプションが認められている。</p>
+<p>まだある！&ensp;この解決策はブラウザーに選択の幅をもたらす。ソースと結びついたメディア・クエリは真か偽かのいずれかの結果になり、もし真なら、ブラウザーはそのソースを読み込まなきゃ<em>いけない</em>。でも<code>sizes</code>と<code>srcset</code>はそこまで頑固じゃない。仕様では、通信が遅かったり高くついたりするとき、小さいソースを読み込むオプションが認められている。</p>
 
-<p>「どうやらすべてうまくいくように思えるね」と君は言い、ゆっくりとうなずきながら、条件分岐的アプローチよりも宣言的アプローチのほうに利点がある、と納得しはじめる。「でもちょっと待って…長さってなに?」</p>
+<p>「どうやらすべてうまくいくように思えるね」と君は言い、ゆっくりとうなずきながら、条件分岐的アプローチよりも宣言的アプローチのほうに利点がある、と納得しはじめる。「でもちょっと待って……長さってなに？」</p>
 
-<p><a href="http://www.w3.org/TR/css3-values/#lengths">長さはあらゆる種類が考えられるよ</a>! 絶対値 (<code>99px</code> や <code>16em</code>) でも相対値 (例に出てきた <code>33.3vw</code> とか) でも。ただ実際のレイアウトでは、ここでの例<em>とは違って</em>、絶対値と相対値が組み合わされてることがたくさんあると思う。そこで、<a href="http://caniuse.com/calc">意外にもけっこうサポートされてる</a> <a href="http://dev.w3.org/csswg/css-values/#calc-notation"><code>calc()</code> 関数</a> の登場。<a href="http://ericportis.com/assets/2014-03-24-srcset-sizes/wolves/wolfroll.html">例の 3 カラムのレイアウトに 12em のサイドバーを追加するとしよう</a>。それには <code>sizes</code> 属性をこう調整すればいい。</p>
+<p><a href="http://www.w3.org/TR/css3-values/#lengths">長さはあらゆる種類が考えられるよ</a>！&ensp;絶対値（<code>99px</code>や<code>16em</code>）でも相対値（例に出てきた<code>33.3vw</code>とか）でも。ただ実際のレイアウトでは、ここでの例<em>とは違って</em>、絶対値と相対値が組み合わされてることがたくさんあると思う。そこで、<a href="http://caniuse.com/calc">意外にもけっこうサポートされてる</a> <a href="http://dev.w3.org/csswg/css-values/#calc-notation"><code>calc()</code>関数</a>の登場。<a href="http://ericportis.com/assets/2014-03-24-srcset-sizes/wolves/wolfroll.html">例の3カラムのレイアウトに12emのサイドバーを追加するとしよう</a>。それには<code>sizes</code>属性をこう調整すればいい。</p>
 
 <pre><code>sizes="(min-width: 36em) calc(.333 * (100vw - 12em)),
        100vw"
 </code></pre>
 
-<p>できあがり!</p>
+<p>できあがり！</p>
 
-<p>「わかったわかった」君は思慮深くそう言い、あごをさすりながら、新しい知識がどっと流れ込んできたことにひどく疲れて (でも同時にわくわくして) いる。「けれども、まだひとつ残ってる—そこにぶら下がってる <code>100vw</code> はなんだ? メディア・クエリを書き忘れたのか?」</p>
+<p>「わかったわかった」君は思慮深くそう言い、あごをさすりながら、新しい知識がどっと流れ込んできたことにひどく疲れて（でも同時にわくわくして）いる。「けれども、まだひとつ残ってる&#x2015;&#x2015;そこにぶら下がってる<code>100vw</code>はなんだ？&ensp;メディア・クエリを書き忘れたのか？」</p>
 
 <p>仕様の言葉を借りて言うと、メディア・クエリとペアになっていない長さは「デフォルトの長さ」だ。もしマッチするメディア・クエリがなかったとき、この長さが使われる。つまり、巨大な、ページ全体にまたがる幅のバナー画像なら、マークアップはこんなふうにシンプルになる。</p>
 
@@ -577,31 +576,31 @@
 <footer class="footnotes" id="footnotes">
     <ol>
         <li id="fn-1">少なくとも<a href="http://tabatkins.github.io/specs/respimg/#variable-size">伸び縮みする</a>画像の場合は。<a href="#fnref-1">↩</a></li>
-        <li id="fn-2">そして君も (そう、そこの君も!) <a href="https://www.indiegogo.com/projects/picture-element-implementation-in-blink">この状況をもっと良くすることができる</a>!&nbsp;<a href="#fnref-2">↩</a></li>
+        <li id="fn-2">そして君も（そう、そこの君も！）<a href="https://www.indiegogo.com/projects/picture-element-implementation-in-blink">この状況をもっと良くすることができる</a>！<a href="#fnref-2">↩</a></li>
     </ol>
 </footer>
 
 </div><!-- /[role="main"] -->
 
 <footer role="contentinfo">
-    <p class="credit"><small>このコンテンツは <a href="http://ericportis.com/posts/2014/srcset-sizes/">Srcset and sizes — ericportis.com</a> (2014 年 3 月 24 日公開) の日本語訳です。本文中の各種技術仕様やその実装についての記述はオリジナル版公開時のものであり、現時点のものとは異なる場合があります。すべてのテキストとイラストレーションは <a rel="license" href="http://creativecommons.org/licenses/by/3.0/">クリエイティブ・コモンズ 表示 3.0 ライセンス</a> のもとに提供されています。</small></p>
+    <p class="credit">このコンテンツは<a href="http://ericportis.com/posts/2014/srcset-sizes/">Srcset and sizes — ericportis.com</a>（2014年3月24日公開）の日本語訳です。本文中の各種技術仕様やその実装についての記述はオリジナル版公開時のものであり、現時点のものとは異なる場合があります。すべてのテキストとイラストレーションは<a rel="license" href="http://creativecommons.org/licenses/by/3.0/">クリエイティブ・コモンズ表示3.0ライセンス</a>のもとに提供されています。</p>
     <table class="colophon">
         <tbody>
             <tr>
                 <th>著者</th>
-                <td><a href="http://ericportis.com/">エリック・ポーティス (Eric Portis)</a></td>
+                <td><a href="http://ericportis.com/">エリック・ポーティス（Eric Portis）</a></td>
             </tr>
             <tr>
                 <th>訳者</th>
-                <td><a href="http://terkel.jp/">鈴木丈 (Takeru Suzuki)</a></td>
+                <td><a href="http://terkel.jp/">鈴木丈（Takeru Suzuki）</a></td>
             </tr>
             <tr>
                 <th>公開日</th>
-                <td><time datetime="2014-09-07">2014 年 9 月 8 日</time></td>
+                <td><time datetime="2014-09-07">2014年9月8日</time></td>
             </tr>
             <tr>
                 <th>更新履歴</th>
-                <td><a href="https://github.com/terkel/srcset-sizes/commits/gh-pages">Commits · terkel/srcset-sizes</a></td>
+                <td><a href="https://github.com/terkel/srcset-sizes/commits/gh-pages">Commits · terkel/srcset-sizes · GitHub</a></td>
             </tr>
         </tbody>
     </table>
