@@ -29,7 +29,20 @@
         --body-font-size: 1.2rem;
         --h2-line-height: 1.25;
         --h2-padding-bottom: 1.5rem;
-        --small-line-height: 1.701388889
+        --small-line-height: 1.701388889;
+        --fullwidth-image-offset: -4rem;
+    }
+}
+
+@media (min-width: 72em) {
+    :root {
+        --fullwidth-image-offset: -8rem;
+    }
+}
+
+@media (min-width: 84em) {
+    :root {
+        --fullwidth-image-offset: -16rem;
     }
 }
 
@@ -120,9 +133,13 @@ ol, ul {
 }
 
 figure {
-    margin-top: calc(var(--body-leading) * 1);
-    margin-bottom: calc(var(--body-leading) * 1);
+    margin: var(--body-leading) 0;
     text-align: center;
+}
+
+figure.full {
+    margin-left: var(--fullwidth-image-offset, 0);
+    margin-right: var(--fullwidth-image-offset, 0);
 }
 
 pre {
