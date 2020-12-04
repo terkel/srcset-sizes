@@ -288,6 +288,7 @@ a.reversefootnote {
 }
 
 .colophon {
+    margin-left: 2em;
     margin-top: calc(var(--small-font-size) * var(--small-line-height));
     margin-bottom: 0;
 }
