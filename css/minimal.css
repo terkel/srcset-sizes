@@ -69,10 +69,6 @@ a[href^="#fnref-"],
     font-family: "TsukuGoPro-R", sans-serif;
 }
 
-em, b, strong {
-    font-family: "TsukuGoPro-B", sans-serif;
-}
-
 h1 {
     font-family: "YurukaStd-UB", sans-serif;
     font-weight: 900;
@@ -179,9 +175,13 @@ pre var {
     margin-right: 0;
 }
 
+em, b, strong {
+    font-family: "TsukuGoPro-B", sans-serif;
+    font-weight: 700;
+}
+
 em {
     font-style: normal;
-    font-weight: 500;
 }
 
 sub,
