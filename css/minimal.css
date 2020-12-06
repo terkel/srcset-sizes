@@ -151,7 +151,7 @@ code,
 samp,
 kbd,
 var {
-    font-family: "Source Code Pro", "TsukuGoPro-R", monospace;
+    font-family: "UniversNextTypewrtrPro-Rg", "TsukuGoPro-R", monospace;
     font-size: 1em;
     line-height: 1;
     background-color: rgba(0, 0, 0, 0.05);
@@ -173,6 +173,16 @@ pre var {
     padding: 0;
     margin-left: 0;
     margin-right: 0;
+}
+code em, code b, code strong,
+kbd em, kbd b, kbd strong,
+var em, var b, var strong,
+samp em, samp b, samp strong,
+em code, em kbd, em var, em samp,
+b code, b kbd, b var, b samp,
+strong code, strong kbd, strong var, strong samp {
+    font-family: "UniversNextTypewrtrPro-Bd", "TsukuGoPro-B", monospace;
+    font-weight: 700;
 }
 
 em, b, strong {
