@@ -47,6 +47,11 @@
 }
 
 body {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 1em);
+    justify-content: center;
+    margin: calc(var(--body-leading) * 5) auto calc(var(--body-leading) * 3);
+    max-width: min(40em, 90vw);
     font-family: "TsukuMinPr6N-RB", serif;
     font-size: var(--body-font-size);
     line-height: var(--body-line-height);
@@ -54,11 +59,12 @@ body {
     line-break: normal;
     overflow-wrap: break-word;
     hanging-punctuation: allow-end;
-    margin: calc(var(--body-leading) * 5) auto calc(var(--body-leading) * 3);
-    width: 40em;
-    max-width: 90%;
     background-color: rgb(230, 230, 230);
     -webkit-text-size-adjust: 100%;
+}
+
+body > * {
+    grid-column: 1 / -1;
 }
 
 figure,
