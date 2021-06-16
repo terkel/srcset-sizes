@@ -66,6 +66,7 @@ body {
     margin: calc(var(--body-leading) * 5) auto calc(var(--body-leading) * 3);
     width: min(40em, 90vw);
     font: var(--font-body);
+    font-feature-settings: "chws" 1;
     font-kerning: none;
     line-break: normal;
     overflow-wrap: break-word;
