@@ -18,8 +18,8 @@
     --font-body:       450 var(--body-font-size)/var(--body-line-height) "Tsukushi Mincho", serif;
     --font-body-small: 450 var(--small-font-size)/var(--small-line-height) "Tsukushi Mincho", serif;
     --font-h1:         900 var(--h1-font-size)/var(--h1-line-height) "Yuruka", sans-serif;
-    --font-h2:         600 var(--h2-font-size)/var(--h2-line-height) "Tsukushi AN B Round Gothic", sans-serif;
-    --font-h3:         700 var(--h3-font-size)/var(--h3-line-height) "Tsukushi AN B Round Gothic", sans-serif;
+    --font-h2:         600 var(--h2-font-size)/var(--h2-line-height) "Tsukushi AN B Round Gothic L", sans-serif;
+    --font-h3:         600 var(--h3-font-size)/var(--h3-line-height) "Tsukushi AN B Round Gothic L", sans-serif;
     --font-caption:    300 var(--small-font-size)/var(--small-line-height) var(--font-family-sans);
 
     --font-family-sans: "Tsukushi Gothic", sans-serif;
