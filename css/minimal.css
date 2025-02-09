@@ -124,7 +124,7 @@ h3 {
     font-size: var(--h3-font-size);
     line-height: var(--h3-line-height);
     font-family: var(--font-family-sans-variable);
-    font-variation-settings: "ital" 0, "wdth" 50, "wght" 500;
+    font-variation-settings: "ital" 0, "wdth" 62.5, "wght" 500;
     font-weight: inherit;
     font-feature-settings: "palt" 1;
     font-kerning: normal;
