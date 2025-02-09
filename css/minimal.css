@@ -15,15 +15,9 @@
     --small-font-size: calc(var(--body-font-size) * 6 / 7);
     --small-line-height: 1.458333333;
 
-    --font-body:       400 var(--body-font-size)/var(--body-line-height) "TsukuMinPr6N-RB", serif;
-    --font-body-small: 400 var(--small-font-size)/var(--small-line-height) "TsukuMinPr6N-RB", serif;
-    --font-h1:         900 var(--h1-font-size)/var(--h1-line-height) "YurukaStd-UB", sans-serif;
-    --font-h2:         700 var(--h2-font-size)/var(--h2-line-height) "TsukuANBRdGoLStd-B", sans-serif;
-    --font-h3:         700 var(--h3-font-size)/var(--h3-line-height) "TsukuANBRdGoLStd-B", sans-serif;
-    --font-caption:    400 var(--small-font-size)/var(--small-line-height) "TsukuGoPro-R", sans-serif;
-
-    --font-family-mono-regular: "UniversNextTypewrtrPro-Rg", "TsukuGoPro-R", monospace;
-    --font-family-mono-bold: "UniversNextTypewrtrPro-Bd", "TsukuGoPro-B", monospace;
+    --font-family-sans-variable: "momochidori-variable", sans-serif;
+    --font-family-serif: "ten-mincho-text", serif;
+    --font-family-mono: "Menlo", "Consolas", "Hiragino Sans", monospace;
 }
 
 @media (min-width: 48em) {
@@ -60,19 +54,25 @@
 }
 
 body {
+    background-color: rgb(234, 234, 234);
     display: grid;
     grid-template-columns: repeat(auto-fit, 1em);
     justify-content: center;
     margin: calc(var(--body-leading) * 5) auto calc(var(--body-leading) * 3);
     width: min(40em, 90vw);
-    font: var(--font-body);
+    font-family: var(--font-family-serif);
+    font-weight: 400;
+    font-size: var(--body-font-size);
+    line-height: var(--body-line-height);
     font-feature-settings: "chws" 1;
     font-kerning: none;
     line-break: normal;
     overflow-wrap: break-word;
     hanging-punctuation: allow-end;
-    background-color: rgb(234, 234, 234);
-    -webkit-text-size-adjust: 100%;
+    text-spacing-trim: trim-start;
+    text-autospace: normal;
+    hyphens: auto;
+    -webkit-text-size-adjust: 100%; 
 }
 
 body > * {
@@ -80,7 +80,11 @@ body > * {
 }
 
 h1 {
-    font: var(--font-h1);
+    font-size: var(--h1-font-size);
+    line-height: var(--h1-line-height);
+    font-family: var(--font-family-sans-variable);
+    font-weight: inherit;
+    font-variation-settings: "ital" 0, "wdth" 100, "wght" 900;
     font-feature-settings: "palt" 1;
     font-kerning: normal;
     margin-top: 0;
@@ -96,8 +100,12 @@ h1 .amp {
 }
 
 h2 {
-    font: var(--font-h2);
     box-sizing: border-box;
+    font-size: var(--h2-font-size);
+    line-height: var(--h2-line-height);
+    font-family: var(--font-family-sans-variable);
+    font-weight: inherit;
+    font-variation-settings: "ital" 0, "wdth" 50, "wght" 400;
     font-feature-settings: "palt" 1;
     font-kerning: normal;
     padding-top: var(--h2-padding-top, 0);
@@ -113,7 +121,11 @@ h2 code {
 }
 
 h3 {
-    font: var(--font-h3);
+    font-size: var(--h3-font-size);
+    line-height: var(--h3-line-height);
+    font-family: var(--font-family-sans-variable);
+    font-variation-settings: "ital" 0, "wdth" 50, "wght" 500;
+    font-weight: inherit;
     font-feature-settings: "palt" 1;
     font-kerning: normal;
     margin-top: calc(var(--body-leading) * 2);
@@ -152,7 +164,7 @@ code,
 samp,
 kbd,
 var {
-    font-family: var(--font-family-mono-regular);
+    font-family: var(--font-family-mono);
     font-size: 1em;
     line-height: 1;
     background-color: rgba(0, 0, 0, 0.05);
@@ -174,13 +186,13 @@ pre :is(code, kbd, samp, var) {
 }
 
 :is(code, kbd, samp) :is(em, b, strong) {
-    font-family: var(--font-family-mono-regular);
-    font-weight: 700;
+    font-family: inherit;
 }
 
 em, b, strong {
-    font-family: "TsukuGoPro-B", sans-serif;
-    font-weight: 700;
+    font-family: var(--font-family-sans-variable);
+    font-variation-settings: "ital" 0, "wdth" 100, "wght" 800;
+    font-weight: inherit;
 }
 
 em {
@@ -232,7 +244,8 @@ video {
 }
 
 table {
-    font: var(--font-caption);
+    font-size: var(--small-font-size);
+    line-height: var(--small-line-height);
     border-collapse: collapse;
     margin-top: var(--body-leading);
     margin-bottom: calc(var(--body-leading) + 0.5rem);
@@ -278,7 +291,8 @@ table .yes {
 }
 
 .footnotes {
-    font: var(--font-caption);
+    font-size: var(--small-font-size);
+    line-height: var(--small-line-height);
 }
 
 .footnotes ol {
@@ -287,7 +301,8 @@ table .yes {
 }
 
 .credit {
-    font: var(--font-body-small);
+    font-size: var(--small-font-size);
+    line-height: var(--small-line-height);
     margin-top: 0;
     margin-bottom: 0;
 }
