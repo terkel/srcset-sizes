@@ -84,7 +84,7 @@ h1 {
     line-height: var(--h1-line-height);
     font-family: var(--font-family-sans-variable);
     font-weight: inherit;
-    font-variation-settings: "ital" 0, "wdth" 100, "wght" 900;
+    font-variation-settings: "wdth" 100, "wght" 900;
     font-feature-settings: "palt" 1;
     font-kerning: normal;
     margin-top: 0;
@@ -105,7 +105,7 @@ h2 {
     line-height: var(--h2-line-height);
     font-family: var(--font-family-sans-variable);
     font-weight: inherit;
-    font-variation-settings: "ital" 0, "wdth" 50, "wght" 400;
+    font-variation-settings: "wdth" 50, "wght" 400;
     font-feature-settings: "palt" 1;
     font-kerning: normal;
     padding-top: var(--h2-padding-top, 0);
@@ -124,7 +124,7 @@ h3 {
     font-size: var(--h3-font-size);
     line-height: var(--h3-line-height);
     font-family: var(--font-family-sans-variable);
-    font-variation-settings: "ital" 0, "wdth" 62.5, "wght" 500;
+    font-variation-settings: "wdth" 62.5, "wght" 500;
     font-weight: inherit;
     font-feature-settings: "palt" 1;
     font-kerning: normal;
@@ -191,7 +191,7 @@ pre :is(code, kbd, samp, var) {
 
 em, b, strong {
     font-family: var(--font-family-sans-variable);
-    font-variation-settings: "ital" 0, "wdth" 100, "wght" 800;
+    font-variation-settings: "wdth" 100, "wght" 800;
     font-weight: inherit;
 }
 
@@ -272,10 +272,23 @@ table .yes {
     color: rgb(0, 128, 0);
 }
 
-.author {
-    display: block;
+.meta {
+    font-family: var(--font-family-sans-variable);
+    font-variation-settings: "wdth" 75, "wght" 400;
+    font-feature-settings: "palt" 1;
     text-align: center;
     margin-bottom: calc(var(--body-leading) * 2);
+}
+
+.author {
+    font-size: var(--h3-font-size);
+    line-height: var(--h3-line-height);
+    font-variation-settings: "wdth" 100, "wght" 700;
+    margin-block: 0;
+}
+
+.translator {
+    margin-block: 0;
 }
 
 .footnotes,
