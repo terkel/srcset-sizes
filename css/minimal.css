@@ -220,11 +220,6 @@ a {
     text-underline-offset: 0.125em;
 }
 
-a[href^="#fn-"],
-a[href^="#fnref-"] {
-    font-family: "TsukuGoPro-R", sans-serif;
-}
-
 a[href^="#fn-"] {
     padding: 0 0.25em;
     text-decoration: none;
