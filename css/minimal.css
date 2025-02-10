@@ -280,6 +280,7 @@ table .yes {
     font-size: var(--h3-font-size);
     line-height: var(--h3-line-height);
     font-variation-settings: "wdth" 100, "wght" 700;
+    font-feature-settings: "palt" 1;
     margin-block: 0;
 }
 
