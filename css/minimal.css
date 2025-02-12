@@ -189,7 +189,7 @@ pre :is(code, kbd, samp, var) {
 
 em, b, strong {
     font-family: var(--font-family-sans-variable);
-    font-variation-settings: "wdth" 100, "wght" 800;
+    font-variation-settings: "wdth" 100, "wght" 700;
     line-height: 1;
 }
 
